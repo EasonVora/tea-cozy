@@ -3,23 +3,11 @@ html {
 }
 
 * {
-    font-family: Helvetica, Arial, sans-serif; /* Changed default font family selection order to have Helvetica as primary */
+    font-family: Helvetica, Arial, sans-serif; /* Changed default font family selection order to have Helvetica as primary, kept Arial as backup */
     color: seashell;
     
 } 
-
-/* @media (min-width: 600px) {
-    #menu a {
-        display: inline-block;
-    }
-}
-@media (max-width: 600px) {
-    #menu a {
-        display: block;
-    }
-} */
-
-    
+  
 /* FIXED TOPBAR */
 header { 
     background-color: black;
@@ -55,26 +43,8 @@ header {
             a {
                 display: block;
             }
-        }
-    }
-    
-    /* ul {
-        display: flex;
-        flex-wrap: nowrap;
-        text-align: right;
-        li {
-            flex-direction: row;
-            
-            list-style: none;
-
-            a {
-                color: seashell;
-                text-decoration: underline;
-                font-size: 22px;
-            }
-        }
-    } */
-    
+        } /* end of media query */
+    } /* end of menu */
 } /* end of header */
 
 body {
@@ -93,7 +63,7 @@ body {
         justify-content: center;
         align-items: center;
         padding: 0;
-        margin: 0;
+        margin: -5px 0 0 0;
 
         #mission {
             background-color: black;
@@ -166,7 +136,6 @@ body {
             
             .address-box {
                 background-color: black;
-                /* font-size: 22px; */
                 text-align: center;
                 margin: 15px 40px;
                 width: 300px;
