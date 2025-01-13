@@ -8,13 +8,24 @@ html {
     
 } 
 
+/* @media (min-width: 600px) {
+    #menu a {
+        display: inline-block;
+    }
+}
+@media (max-width: 600px) {
+    #menu a {
+        display: block;
+    }
+} */
+
+    
 /* FIXED TOPBAR */
 header { 
     background-color: black;
     border-bottom: 1px solid seashell;
     display: flex;
     flex-wrap: nowrap;
-    justify-content: space-between;
     align-items: center;
     position: fixed;
     top: 0;
@@ -22,24 +33,48 @@ header {
     right: 0;
     z-index: 1000;
     height: 69px;
+    width: 100%;
     margin: 0;
     padding: 10px;
 
     #logo {
         height: 50px;
+        padding-right: 20px;
     }
+    #menu {
+        position: absolute;
+        right: 50px;
 
-    li {
-        display: inline-flex;
-        flex-wrap: nowrap;
-        margin-left: 25px;
-
-        a {
-            color: seashell;
-            text-decoration: underline;
-            font-size: 22px;
+        @media (min-width: 600px) {
+            a {
+                display: inline-block;
+                margin-right: 20px;
+            }
         }
-    } /* end of header li */
+        @media (max-width: 600px) {
+            a {
+                display: block;
+            }
+        }
+    }
+    
+    /* ul {
+        display: flex;
+        flex-wrap: nowrap;
+        text-align: right;
+        li {
+            flex-direction: row;
+            
+            list-style: none;
+
+            a {
+                color: seashell;
+                text-decoration: underline;
+                font-size: 22px;
+            }
+        }
+    } */
+    
 } /* end of header */
 
 body {
@@ -48,7 +83,7 @@ body {
     flex-direction: column;
     justify-content: center;
     margin-top: 69px;
-    padding: 0 20px;
+    padding: 0 40px;
 
 /* INTRO ARTICLE */
     #image-and-mission { 
@@ -112,6 +147,7 @@ body {
         background-size: cover;
         background-position: center center;
         min-height: 500px;
+        margin-bottom: 0;
 
         h2 {
             text-align: center;
@@ -128,7 +164,6 @@ body {
             width: 100%;
             padding-bottom: 100px;
             
-            
             .address-box {
                 background-color: black;
                 /* font-size: 22px; */
@@ -141,4 +176,22 @@ body {
             }
         } /* end of locations */
     } /* end of location-article */
+
+    #contact {
+        text-align: center;
+        height: 200px;
+        margin-top: 0;
+        padding: 0;
+
+        h2 {
+            line-height: .5;
+            padding: 0;
+            margin: 20px 0 50px 0;
+        }
+    }
 } /* end of Body */
+
+footer h5 {
+    position: relative;
+    left: -20px;
+}
